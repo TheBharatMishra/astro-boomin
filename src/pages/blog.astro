@@ -1,0 +1,8 @@
+---
+import { getCollection } from "astro:content";
+import Header from "../components/Header.astro";
+
+const posts = await getCollection('posts')
+---
+
+<Header/>
