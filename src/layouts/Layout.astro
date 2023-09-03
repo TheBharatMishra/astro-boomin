@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
 import type { string } from 'astro/zod';
 
@@ -27,9 +27,9 @@ const {title="Astro Boomin'",description='Here we talk about Astro.',image="http
 		<meta name="generator" content={Astro.generator} />
 		<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 		<title>{title}</title>
-		<ViewTransitions/>
+		<!-- <ViewTransitions/> -->
 	</head>
-	<body class='h-screen bg-slate-700'>
+	<body class='h-screen bg-gray-500 flex justify-between flex-col'>
         <slot/>
     </body>
     </html>

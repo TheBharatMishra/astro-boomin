@@ -10,14 +10,14 @@ type Props ={
 const {post} = Astro.props;
 ---
 
-<article>
+<article class='bg-purple-500 flex flex-col p-4 items-center m-5 border border-purple-950 rounded-lg'>
 <a href={`blog/${post.slug}`}>
-<Image src={post.data.image} width={300} height={300/1.5} alt={post.data.title} format="webp" class="rounded"/>
+<Image src={post.data.image} width={300} height={300/1.5} alt={post.data.title} format="webp" class="rounded-lg"/>
 </a>
 <a href={`blog/${post.slug}`}>
-<h2>{post.data.title}</h2>
+    <h2 class='text-2xl font-bold m-2'>{post.data.title}</h2>
 </a>
-<p class='line-clamp-2'>
+<p class='mx-5 line-clamp-3'>
     {post.body}
 </p>
 </article>
