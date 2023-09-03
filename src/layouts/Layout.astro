@@ -25,10 +25,11 @@ const {title="Astro Boomin'",description='Here we talk about Astro.',image="http
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
+		<script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 		<title>{title}</title>
 		<ViewTransitions/>
 	</head>
-	<body>
+	<body class='h-screen bg-slate-700'>
         <slot/>
     </body>
     </html>

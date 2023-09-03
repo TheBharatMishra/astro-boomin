@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import {Image} from 'astro:assets';
+import {getCollection} from 'astro:content';
+export  const getStaticPaths =  ( async() => {
+    const posts= await getCollection('posts');
+
+    const paths = posts.map(post =>{
+        return {params:{
+            slug:post.slug
+        },props:{post}}
+    })
+
+  
+    return paths;
+}) 
+
+type Props={
+    post: CollectionEntry<"posts">;
+}
+
+const {post}= Astro.props;
+---
+
+<Layout>
+
+    <h1>{post.data.title}</h1>
+    <Image src={post.data.image} alt={post.data.title} format="webp" width={600} height={600/2} class='rounded' />
+</Layout>
